@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import axios from 'axios';
 
 const StyledDiv = styled.div`
     margin-top: 5rem;
@@ -9,9 +10,15 @@ const StyledDiv = styled.div`
     align-items: center
 `;
 
-function UpdateMovie({ modifyMovie }) {
+function UpdateMovie(props) {
 
-
+    /* const handleSubmit = e => {
+        e.preventDefault();
+        axios
+        .put(`http://localhost:5000/api/movies/${id}`, movie)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+    } */
 
 
 
@@ -39,9 +46,10 @@ function UpdateMovie({ modifyMovie }) {
                     name="stars"
                     />
                 </label>
+                <button>UPDATE</button>
             </form>
         </StyledDiv>
     )
 }
 
-export default UpdateMovie
+export default UpdateMovie;
